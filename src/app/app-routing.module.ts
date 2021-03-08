@@ -4,10 +4,10 @@ import { HomepageComponent } from './component/homepage/homepage.component';
 import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
- /*{path:'', redirectTo: 'home',pathMatch:'full'},
+ {path:'', redirectTo: 'home',pathMatch:'full'},
  {path:'home', component: HomepageComponent },
- {path:'profile', component: ProfileComponent },*/
- {path:'profile', component: ProfileComponent }
+ {path:'profile', component: ProfileComponent },
+ 
   /*{
     path: 'Profile',
     pathMatch: 'full',
