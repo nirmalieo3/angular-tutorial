@@ -6,7 +6,7 @@
          </button>
          <span>My Angular Class App</span>
          <span class="example-spacer"></span>
-         <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/profile']">Profile</button>
+         <button mat-raised-button color="accent" class="btn1" [routerLink] ="['/profile']">Profile</button>
        
          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
            <mat-icon>favorite</mat-icon>
@@ -65,8 +65,8 @@
          </p>
        </mat-card-content>
        <mat-card-actions>
-         <button mat-button>LIKE</button>
-         <button mat-button>SHARE</button>
+         <button mat-button (click)="alertFun()">LIKE</button>
+         <button mat-button ><a href="https://reactjs.org/" target="_blank"></a>>SHARE</button>
        </mat-card-actions>
      </mat-card>
      </div>

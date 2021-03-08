@@ -13,13 +13,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {id: 1, name: 'Angular', type: 'framework',  usage:'front-end'},
   {id: 2, name: 'React', type: 'Js Library',  usage:'front-end'},
   {id: 3, name: 'Webpack', type: 'framework',  usage:'front-end'},
-  {id: 4, name: 'JQuery', type: 'framework',  usage:'front-end'},
-  {id: 5, name: 'Bootstrap', type: 'library',  usage:'front-end'},
+  {id: 4, name: 'JQuery', type:  'js Library',  usage:'front-end'},
+  {id: 5, name: 'Bootstrap', type: 'framework',  usage:'front-end'},
   {id: 6, name: 'CSS', type: 'style-sheet',  usage:'front-end'},
   {id: 7, name: 'Javascript', type: 'language',  usage:'front-end'},
   {id: 8, name: 'Html', type: 'Mark up',  usage:'front-end'},
   {id: 9, name: 'Git', type: 'tool',  usage:'front-end'},
-  {id: 10, name: 'Node Js', type: 'framework',  usage:'front-end'},
+  {id: 10, name: 'Node Js', type: 'platform',  usage:'back-end'},
 ];
 
 @Component({
@@ -35,6 +35,9 @@ export class HomepageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  alertFun(){
+    alert('I like React!!');
   }
   displayedColumns: string[] = ['id', 'name', 'type', 'usage'];
   dataSource = ELEMENT_DATA;
