@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    justify-content:center;
+   
+    flex-wrap: wrap;
+   /* background-color: aquamarine;*/
+   background-color: rgba(189, 198, 238, 0.9);
+    height: 650px;
+}
+h2{
+    text-align: center;
+    margin-top: 50px;
+    width: 80%;
+    height: 50px;
+}
+.example-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:45%;
+    height: 300px;
+    background-color: azure;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+label{
+    width: 25%;
+    margin:5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+input{
+    width: 55%;
+    margin: 5px;
+    font-size: 18px;
+    height:30px
+}
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  button{
+      height: 40px;
+      margin-top: 10px;
+  }
+ 
+    

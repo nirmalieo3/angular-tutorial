@@ -1,0 +1,20 @@
+<div class="container">
+   
+    <h2>Profile Page</h2>
+    <button mat-raised-button color="warn" ><a routerLink="" >back</a></button>
+   
+    <mat-card class="example-card">
+       <label for="name">Name :</label>
+       <input type="text" placeholder="name" id= "name" name= "name" [(ngModel)]= "testo"  />
+       <label for="surname">Surname :</label>
+       <input type="text" placeholder="surname" id="surname" name= "surname" [(ngModel)]= "testo2"/>
+       <label for="email">E-mail :</label>
+       <input type="text" placeholder="email" id="email" name= "email" [(ngModel)]= "testo3"/>
+       <label for="codicefiscale">Codicefiscale :</label>
+       <input type="text" placeholder="Codicefiscale" id="codicefiscale" name= "codicefiscale" [(ngModel)]= "testo4" />
+       <div class="example-button-row">
+           <button mat-raised-button color="primary" [disabled]= "test()" (click)=save()>Salva dati</button>  
+         </div>
+     </mat-card>   
+   
+   </div>
