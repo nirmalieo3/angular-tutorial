@@ -4,16 +4,15 @@ import { HomepageComponent } from './component/homepage/homepage.component';
 import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    pathMatch: 'full',
-    component:HomepageComponent
-  },
-  {
+ {path:'', redirectTo: 'home',pathMatch:'full'},
+ {path:'home', component: HomepageComponent },
+ {path:'profile', component: ProfileComponent },
+  
+  /*{
     path: 'Profile',
     pathMatch: 'full',
     component: ProfileComponent
-  },
+  },*/
   
 ]
 
