@@ -1,5 +1,5 @@
 <body>
-    <div class="body"> 
+   <div class="body"> 
        <mat-toolbar color="primary">
          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"  >
            <mat-icon (click)="drawer.toggle()">menu</mat-icon>
@@ -22,6 +22,9 @@
            <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/profile']">Profile</button>
            </div>
            <div>
+            <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/flexlayout']">Flexlayout</button>
+            </div>
+           <div>
            <button mat-raised-button color="primary" class="btn1" >Class Notes</button>
            </div>
            <p *ngIf="showFiller"></p>
@@ -29,9 +32,10 @@
             
            </button>
          </mat-drawer>
-   
-     <div class="example-sidenav-content">   
-     <div class="card">
+        
+     <div class="example-sidenav-content">
+      
+       <div class="card">
      <mat-card class="example-card">
        <mat-card-header>
          <div mat-card-avatar class="example-header-image"></div>

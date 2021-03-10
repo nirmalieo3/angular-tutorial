@@ -16,14 +16,17 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { HomepageComponent } from './component/homepage/homepage.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { DialogComponent } from './component/dialog/dialog.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutComponent } from './component/flex-layout/flex-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     ProfileComponent,
-    DialogComponent
+    DialogComponent,
+    FlexLayoutComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { DialogComponent } from './component/dialog/dialog.component';
     MatCardModule,
     MatSidenavModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    FlexLayoutModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
