@@ -19,7 +19,9 @@ import { DialogComponent } from './component/dialog/dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FlexLayoutComponent } from './component/flex-layout/flex-layout.component';
 import { StudentService } from './student.service';
-import { GetinfoComponent } from './component/getinfo/getinfo.component'
+import { GetinfoComponent } from './component/getinfo/getinfo.component';
+import { HeroesListComponent } from './component/heroes-list/heroes-list.component';
+import { HeroesDetailComponent } from './component/heroes-detail/heroes-detail.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,8 @@ import { GetinfoComponent } from './component/getinfo/getinfo.component'
     DialogComponent,
     FlexLayoutComponent,
     GetinfoComponent,
+    HeroesListComponent,
+    HeroesDetailComponent,
 
   ],
   imports: [

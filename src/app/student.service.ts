@@ -17,4 +17,25 @@ export class StudentService {
     addStudentData(item: any): void {  
         this._studentList.push(item);  
     }  
+    getHeroes(){
+      return [
+        {
+          "superhero":"Loki",
+          "actor":"Tom Hiddleston",
+         
+          },
+        {
+          "superhero":"Thor", 
+          "actor":"Thor Odinson",
+          },
+      {
+        "superhero":"Captain America", 
+        "actor":"Steve Rogers",
+        },
+      {
+        "superhero":"Flash", 
+        "actor":"Jay Garrick",
+        }
+      ]
+    }
 }  

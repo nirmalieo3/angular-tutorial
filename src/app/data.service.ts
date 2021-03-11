@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  info1: string[] = ["john Matthew", "E34", "kklo@.com"]
-  info2: string[] = ["jahn Matthew", "E35", "khgugo@.com"]
-  info3: string[] = ["jihn Matthew", "E36", "rururlo@.com"]
+  info1: string[] = ["John Matthew", "E34", "kklo@.com"]
+  info2: string[] = ["Jacob Hilary", "E35", "khgugo@.com"]
+  info3: string[] = ["Samira Milroy", "E36", "rururlo@.com"]
   //method to retun above data
   getInfo1():string[]{
     return this.info1
