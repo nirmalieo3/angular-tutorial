@@ -1,11 +1,11 @@
 .container{
     display: flex;
     justify-content:center;
-   
+    width:100%;
     flex-wrap: wrap;
    /* background-color: aquamarine;*/
    background-color: rgba(189, 198, 238, 0.9);
-    height: 650px;
+    height: 850px;
 }
 h2{
     text-align: center;
@@ -31,7 +31,7 @@ label{
     font-size: 20px;
 }
 input{
-    width: 55%;
+    width: 95%;
     margin: 5px;
     font-size: 18px;
     height:30px
@@ -43,6 +43,11 @@ input{
   button{
       height: 40px;
       margin-top: 10px;
+  }
+ 
+  h3 {
+      margin-top: 40px;
+     
   }
  
     

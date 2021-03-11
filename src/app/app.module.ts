@@ -18,7 +18,8 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { DialogComponent } from './component/dialog/dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FlexLayoutComponent } from './component/flex-layout/flex-layout.component';
-
+import { StudentService } from './student.service';
+import { GetinfoComponent } from './component/getinfo/getinfo.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { FlexLayoutComponent } from './component/flex-layout/flex-layout.compone
     ProfileComponent,
     DialogComponent,
     FlexLayoutComponent,
+    GetinfoComponent,
 
   ],
   imports: [
@@ -46,7 +48,7 @@ import { FlexLayoutComponent } from './component/flex-layout/flex-layout.compone
     MatDialogModule,
     FlexLayoutModule 
   ],
-  providers: [],
+  providers: [StudentService], 
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA] 
 })

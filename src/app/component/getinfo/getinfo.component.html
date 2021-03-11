@@ -1,0 +1,44 @@
+
+<body>
+  <div class="h1">
+    <h1>Angular service</h1>
+    </div>
+<div class="container">
+    
+<div class="item">
+    <div>
+        <form #frm="ngForm" (ngSubmit)="updateInfo(frm)">
+            <input type="text" name="location" value="" ngModel/>
+            <button mat-raised-button color="primary" class="btn1" type="submit">add info</button>
+        </form>
+    <button mat-raised-button color="primary" class="btn1" (click)= "getinfoService1()">employ2</button>
+ <ul>
+    <li *ngFor = "let info of infoRecieved1">{{info}}</li>
+ </ul>
+   </div>
+  
+   <div>
+    <form #frm2="ngForm" (ngSubmit)="updateInfo2(frm2)">
+        <input type="text" name="location" value="" ngModel/>
+        <button mat-raised-button color="primary" class="btn1" type="submit">add info</button>
+    </form>
+ <button mat-raised-button color="primary" class="btn1" (click)= "getinfoService2()">Employ2</button>
+ <ul>
+    <li *ngFor = "let info of infoRecieved2">{{info}}</li>
+ </ul>
+ </div>
+ <div>
+    <form #frm3="ngForm" (ngSubmit)="updateInfo3(frm3)">
+        <input type="text" name="location" value="" ngModel/>
+        <button mat-raised-button color="primary" class="btn1" type="submit">add info</button>
+    </form>
+ <button mat-raised-button color="primary" class="btn1" (click)= "getinfoService3()">Employ3</button>
+ <ul>
+    <li *ngFor = "let info of infoRecieved3">{{info}}</li>
+  </ul>
+  </div>
+</div>
+
+</div>
+
+</body>

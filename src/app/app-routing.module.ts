@@ -1,3 +1,4 @@
+import { GetinfoComponent } from './component/getinfo/getinfo.component';
 import { FlexLayoutComponent } from './component/flex-layout/flex-layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,8 +9,7 @@ const routes: Routes = [
  {path:'home', component: HomepageComponent },
  {path:'profile', component: ProfileComponent },
  {path:'flexlayout', component: FlexLayoutComponent },
- 
- 
+ {path:'getinfo', component: GetinfoComponent },
   
 ]
 
