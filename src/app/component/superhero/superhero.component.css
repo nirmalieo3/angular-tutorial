@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+.filter{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+table {
+    width: 90%;
+   margin: 15px auto;
+   background-color: lightblue;
+  }
+  table:hover{
+      box-shadow: 5px 5px 5px 5px grey;
+  }
+img{
+    width:150px;
+    height:150px;
+}
+img:hover{
+    box-shadow:  3px 3px 3px 3px lightcoral;
+}
+th{
+    font-size: 22px;
+    padding: 30px;
+    color:white;
+    background-color: grey;
+}
+td{
+    font-size: 18px;
+    padding:5px;
+}

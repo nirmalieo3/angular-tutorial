@@ -1,0 +1,53 @@
+<div class="h1">
+<h1> SuperheroTable with an API mock service</h1>
+</div>
+<mat-form-field>
+    <mat-label class="filter">Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="superhero">
+      <th mat-header-cell *matHeaderCellDef> Superhero </th>
+      <td mat-cell *matCellDef="let element"> {{element.superhero}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="publisher">
+      <th mat-header-cell *matHeaderCellDef> publisher </th>
+      <td mat-cell *matCellDef="let element"> {{element.publisher}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="actor">
+      <th mat-header-cell *matHeaderCellDef> Actor </th>
+      <td mat-cell *matCellDef="let element"> {{element.actor}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="cameout">
+      <th mat-header-cell *matHeaderCellDef> First appearence </th>
+      <td mat-cell *matCellDef="let element"> {{element.cameout}} </td>
+    </ng-container>
+    <ng-container matColumnDef="characters">
+        <th mat-header-cell *matHeaderCellDef> Character </th>
+        <td mat-cell *matCellDef="let element"> {{element.characters}} </td>
+      </ng-container>
+    <ng-container matColumnDef="images">
+        <th mat-header-cell *matHeaderCellDef>Image </th>
+        <td mat-cell *matCellDef="let element"><img [src]='element.images' alt="image"> </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+ 

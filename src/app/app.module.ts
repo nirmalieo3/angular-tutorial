@@ -21,7 +21,11 @@ import { FlexLayoutComponent } from './component/flex-layout/flex-layout.compone
 import { StudentService } from './student.service';
 import { GetinfoComponent } from './component/getinfo/getinfo.component';
 import { HeroesListComponent } from './component/heroes-list/heroes-list.component';
-import { HeroesDetailComponent } from './component/heroes-detail/heroes-detail.component'
+import { HeroesDetailComponent } from './component/heroes-detail/heroes-detail.component';
+import { TableComponent } from './component/table/table.component'
+import { HttpClientModule } from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { SuperheroComponent } from './component/superhero/superhero.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +36,8 @@ import { HeroesDetailComponent } from './component/heroes-detail/heroes-detail.c
     GetinfoComponent,
     HeroesListComponent,
     HeroesDetailComponent,
+    TableComponent,
+    SuperheroComponent,
 
   ],
   imports: [
@@ -50,7 +56,9 @@ import { HeroesDetailComponent } from './component/heroes-detail/heroes-detail.c
     MatSidenavModule,
     MatTableModule,
     MatDialogModule,
-    FlexLayoutModule 
+    FlexLayoutModule ,
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [StudentService], 
   bootstrap: [AppComponent],
