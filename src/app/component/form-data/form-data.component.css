@@ -1,11 +1,10 @@
 body{
-    /*background-color: rgb(152, 247, 247);*/
-    background-color: rgba(160, 175, 240, 0.9);
+    background-color:lightcyan;
    
-   }
+}
 h1{
     text-align: center;
- 
+    margin-top: 40px;
 }
 .filter{
     margin-left: 10px;
@@ -16,6 +15,7 @@ table {
     width: 90%;
    margin: 15px auto;
    background-color: lightblue;
+   
   }
   table:hover{
       box-shadow: 5px 5px 5px 5px grey;

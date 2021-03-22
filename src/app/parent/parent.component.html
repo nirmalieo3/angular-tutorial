@@ -1,0 +1,15 @@
+<body>
+<h1 style="margin-left: 20%">Parent Component</h1>
+<br>
+<div fxlayout="row" style="margin-left:30%">
+ <div>
+    <button mat-raised-button color="accent" (click)= "inviaChild()">Invio denaro al child component</button>
+ </div>
+ <br><br><br>
+ <h1>Il child component dice:{{testoGrazie}}</h1>
+
+</div>
+
+<br><br><br>
+<app-child [euroCount]= "euro" (grazie)= "ringraziaParent($event)" ></app-child>
+</body>

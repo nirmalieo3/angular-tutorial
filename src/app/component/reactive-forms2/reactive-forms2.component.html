@@ -1,0 +1,91 @@
+<body>
+  <h1 style="text-align: center;">Reactive Form</h1>
+<div class= "style">
+ 
+  <form [formGroup]= "studentForm" (ngSubmit)= "onSubmit()">
+    <h1 class="h1">Student Form</h1>
+  <div class="form-group">
+      <label for="exampleInputName">Name</label>
+      <input type="text" formControlName="name" class="form-control" id="exampleInputName"  placeholder="Name">
+       <span  *ngIf= "studentForm.get('name').invalid && (studentForm.get('name').dirty || studentForm.get('name').touched)">
+        <p style="color: red;">nome puo essere 10 charattere</p>
+       </span>
+      <label for="exampleInputSurname">Surname</label>
+      <input type="text" formControlName="surname" class="form-control" id="exampleInputSurname"  placeholder="Surname">
+        <span  *ngIf= "studentForm.get('surname').invalid && (studentForm.get('surname').dirty || studentForm.get('surname').touched)">
+        <p style="color: red;">surname puo essere 10 charattere</p></span>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"  placeholder="Enter email">
+        <div *ngIf= "studentForm.get('email').errors && (studentForm.get('email').dirty || studentForm.get('email').touched)">
+        <p *ngIf= "studentForm.get('email').errors.required">Email is required</p>
+        <p *ngIf= "studentForm.get('email').errors.pattern">The email address must contain at least the @ character</p>
+        </div>
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <div class="form-control-feedback"
+      *ngIf= "studentForm.get('password').errors && (studentForm.get('password').dirty || studentForm.get('password').touched)">
+   <p *ngIf= "studentForm.get('password').errors.required">Password is required</p>
+   <p *ngIf= "studentForm.get('password').errors.minlength">Password must be 8 characters long </p>
+   <p *ngIf= "studentForm.get('password').errors.maxlength">Password must be less than 14 characters long </p>
+ </div>
+        <label for="exampleInputCity">City</label>
+        <input type="text" formControlName="city" class="form-control" id="exampleInputCity"  placeholder="City">
+        <span  *ngIf= "studentForm.get('city').invalid && (studentForm.get('city').dirty || studentForm.get('city').touched)">
+            <p style="color: red;">nome puo essere more than 4</p>
+           </span>
+        <label for="exampleInputAddress">Address</label>
+        <input type="text" formControlName="address" class="form-control" id="exampleInputAddress"  placeholder="Address">
+       
+        <label for="exampleInputPhoneNumber">Phone Number</label>
+        <input type="phoneNumber" formControlName="phoneNumber" class="form-control" id="exampleInputPhoneNumber"  placeholder="Phone Number">
+        
+      <div class="form-group">
+          <label class=" col-md-2 control-label">Proficiency</label>
+          <div class="col-md-8">
+              <label class="radio-inline ">
+                  <input id="proficiency" type="radio" value="beginner"
+                   formControlName="proficiency">Beginner
+              </label>
+              <label class="radio-inline radio">
+                <input id="proficiency" type="radio" value="intermediate"
+                 formControlName="proficiency">Intermediate
+            </label>
+            <label class="radio-inline radio">
+                <input id="proficiency" type="radio" value="advanced"
+                 formControlName="proficiency">Advanced
+            </label>
+          </div>
+         </div> 
+    
+    <div class= "btn-toolbar">
+     <button type="submit" class="btn btn-primary">Submit</button>
+     <button type="button" class="btn btn-primary" (click)= "loadData()">Load data</button>
+     <button type="button" class="btn btn-primary" (click)= "resetData()">Reset data</button>
+    </div>
+    </div>
+  </form>
+  </div>
+
+<!--<table border="1">
+    <tr>
+        <th style="padding: 10px">Name</th>
+        <th style="padding: 10px">Surname</th>
+        <th style="padding: 10px">Email</th>
+        <th style="padding: 10px">Password</th>
+        <th style="padding: 10px">City</th>
+        <th style="padding: 10px">Address</th>
+        <th style="padding: 10px">Phone Number</th>
+        <th style="padding: 10px">Proficiencyr</th>
+
+    </tr>
+    <td style="padding: 10px">{{studentForm.get('name').value}}</td>
+    <td style="padding: 10px">{{studentForm.get('surname').value}}</td>
+    <td style="padding: 10px">{{studentForm.get('email').value}}</td>
+    <td style="padding: 10px">{{studentForm.get('password').value}}</td>
+    <td style="padding: 10px">{{studentForm.get('contact.city').value}}</td>
+    <td style="padding: 10px">{{studentForm.get('contact.address').value}}</td>
+    <td style="padding: 10px">{{studentForm.get('contact.phoneNumber').value}}</td>
+    <td style="padding: 10px">{{studentForm.get('contact.proficiency').value}}</td>
+</table>-->
+<app-form-data [data]= "childArr"></app-form-data>
+</body>

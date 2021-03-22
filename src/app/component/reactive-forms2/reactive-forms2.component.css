@@ -1,0 +1,29 @@
+body{
+    background-color: rgba(189, 198, 238, 0.9);
+}
+.style{
+    border: 1px solid blue;
+    background-color: lightblue;
+    width: 550px;
+    margin: 0 auto;
+
+}
+
+form{
+    margin: 50px auto;
+    width:500px;
+}
+
+.h1{
+    background-color: lightseagreen;
+    padding: 10px;
+}
+.btn{
+    margin:10px;
+}
+.radio {
+    margin-left: 10px;
+}
+p {
+    color:red
+}

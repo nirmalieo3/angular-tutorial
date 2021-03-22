@@ -1,0 +1,24 @@
+body{
+    background-color: rgba(189, 198, 238, 0.9);
+
+}
+.coloring{
+    color:purple;
+    font-size: 25px;
+    font-weight: bold;
+}
+li{
+    font-size: 22px;
+}
+button, label{
+    font-size: 17px;
+}
+.notes{
+    margin: 50px;
+}
+.h1{
+    text-align: center;
+}
+hr{
+    background-color: black;
+}

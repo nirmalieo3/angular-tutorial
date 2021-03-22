@@ -1,4 +1,48 @@
 
+<body>
+<!--<span><a [routerLink] = "['/home']">Home</a></span>-->
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"  >
+      <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+    </button>
+    <span>My Angular Class App</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" [routerLink] ="['/home']" class="btn2">Home</button>
+    <button mat-raised-button color="accent" [routerLink] ="['/profile']" class="btn2">Profile</button>
+    <button mat-raised-button color="accent" [routerLink] ="['/reactiveForm']" class="btn2">Reactive Form</button>
+    <button mat-raised-button color="accent" [routerLink] ="['/reactiveForms2']" class="btn2">Reactive Form2</button>
+    <button mat-raised-button color="accent" [routerLink] ="['/superhero']" class="btn2">Superhero</button>
+    <button mat-raised-button color="accent" class="example-icon btn2" [routerLink] ="['/parent']">
+     <mat-icon>escalator_warning</mat-icon>parent-chid
+   </button>
+            
+  </mat-toolbar> 
 
-<span><a [routerLink] = "['/home']">Home</a></span>
-<router-outlet></router-outlet>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div>
+      <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/profile']">Profile</button>
+      </div>
+      <div>
+       <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/flexlayout']">Flexlayout</button>
+       </div>
+       <div>
+         <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/getinfo']">Get Info</button>
+         </div>
+         <div>
+           <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/heroes']">Heroes</button>
+           </div>
+      <div>
+      <button mat-raised-button color="primary" class="btn1" [routerLink] ="['/informatica']">Class Notes</button>
+      </div>
+      <!--<p *ngIf="showFiller"></p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+       
+      </button>-->
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        
+          <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</body>

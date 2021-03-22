@@ -1,0 +1,32 @@
+<body>
+<h1 style="margin-left:15%">Reactive Forms</h1>
+<div style="margin-left: 20%">
+    <input type="text" [formControl]= "nome" >
+    <input type="text" [formControl]= "eta" >
+    <input type="text" [formControl]= "paese" >
+    <br><br>
+    <span *ngIf= "nome.invalid">
+        <p style="color: red;">nome puo essere 10 charattere</p>
+    </span>
+     <br><br>
+     <button (click)= "setName()">Imposta Valore</button>
+      <br><br>
+      <button (click)= "setResetName()">Resetta valore</button>
+    </div>
+    <div style="margin-left: 20%; margin-top: 5%">
+     <h4>2.formControlName</h4>
+     <form [formGroup]= "utenteForm" (ngSubmit)= "onFormSubmit()">
+         Nome:<input formControlName= "nome">
+         Cognome:<input formControlName= "cognome">
+         Eta:<input formControlName= "eta">
+         Citta:<input formControlName= "citta">
+         Paese:<input formControlName= "paese">
+         
+          <br>
+          <div *ngIf= "utenteForm.get('nome').invalid">
+              <p>Il nome puo essere lungo massimo 10</p>
+          </div>
+          <button type="submit">Submit</button>
+     </form>
+    </div>
+</body>

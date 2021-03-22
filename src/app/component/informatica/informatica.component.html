@@ -1,0 +1,32 @@
+<body>
+<h1 class="h1">Classnotes</h1>
+<div class="notes">
+<p class="coloring">Ex: Interpolation</p>
+<h2>{{testo1}}</h2>
+<p *ngIf="testo2 == 3 ">{{testo2}}</p><hr>
+<p class="coloring"> Event Binding</p>
+<button (click)="classeDemo()">Valorizza variabile</button><hr>
+<p class="coloring">Structural directive *ngIf</p>
+<button (click)="caricaAstuccio()">riempi astuccio</button><br />
+<h2 *ngIf="controllo">nel mio astuccio ho: {{astuccio}}</h2>
+<p class="coloring"> Structural derective *ngFor</p>
+<div *ngFor= "let item of myArr">
+   <h2> {{item.id}}, {{item.descrizione}}</h2>
+</div><hr>
+<p class="coloring">Ex 2: Structural derective *ngFor</p>
+<ul>
+    <li *ngFor="let item of testArr">
+        {{item.id}} :  {{item.description}}
+    </li>
+</ul><hr>
+<p class="coloring">Adding items to Array</p>
+<h2 *ngFor= "let item of arrProva">{{item.id}} , {{item.descrizione}} , {{item.language}}</h2>
+<button (click)="addItems()">Popola</button><hr>
+<p class="coloring">Two Way Binding</p>
+<label>Id Testo</label>
+<input [(ngModel)]= "idTesto" (keyup)="verificaId(idTesto)" type="number" /> <br /><br />
+<label>Descrizione Testo</label>
+<input [(ngModel)]= "descrizioneTesto" (keyup)="verificaTesto(descrizioneTesto)" type="text" /> <br /><br />
+</div>
+</body>
+

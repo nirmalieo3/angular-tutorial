@@ -26,6 +26,13 @@ import { TableComponent } from './component/table/table.component'
 import { HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { SuperheroComponent } from './component/superhero/superhero.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { ReactiveFormComponent } from './component/reactive-form/reactive-form.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import { ReactiveForms2Component } from './component/reactive-forms2/reactive-forms2.component';
+import { FormDataComponent } from './component/form-data/form-data.component';
+import { InformaticaComponent } from './component/informatica/informatica.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +45,13 @@ import { SuperheroComponent } from './component/superhero/superhero.component';
     HeroesDetailComponent,
     TableComponent,
     SuperheroComponent,
-
+    ParentComponent,
+    ChildComponent,
+    ReactiveFormComponent,
+    ReactiveForms2Component,
+    FormDataComponent,
+    InformaticaComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -58,7 +71,8 @@ import { SuperheroComponent } from './component/superhero/superhero.component';
     MatDialogModule,
     FlexLayoutModule ,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ReactiveFormsModule
   ],
   providers: [StudentService], 
   bootstrap: [AppComponent],

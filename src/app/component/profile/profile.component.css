@@ -1,10 +1,13 @@
+body{
+    background-color: rgba(189, 198, 238, 0.9);
+}
 .container{
     display: flex;
     justify-content:center;
     width:100%;
     flex-wrap: wrap;
    /* background-color: aquamarine;*/
-   background-color: rgba(189, 198, 238, 0.9);
+  
     height: 850px;
 }
 h2{
