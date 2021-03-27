@@ -12,9 +12,9 @@ export class ReactiveFormComponent implements OnInit {
    paese = new FormControl({value:'Italia', disabled: true})
 
  utenteForm =new FormGroup({
-   nome: new FormControl('Nirmalie', Validators.maxLength(10)),
-   cognome: new FormControl('warnakulasuriya'),
-   eta: new FormControl(57),
+   nome: new FormControl('Gianni', Validators.maxLength(10)),
+   cognome: new FormControl('Izzo'),
+   eta: new FormControl(27),
    citta: new FormControl('Roma'),
    paese: new FormControl('Italia')
 

@@ -33,6 +33,7 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { ReactiveForms2Component } from './component/reactive-forms2/reactive-forms2.component';
 import { FormDataComponent } from './component/form-data/form-data.component';
 import { InformaticaComponent } from './component/informatica/informatica.component';
+import { LocalStorageComponent } from './component/local-storage/local-storage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { InformaticaComponent } from './component/informatica/informatica.compon
     ReactiveForms2Component,
     FormDataComponent,
     InformaticaComponent,
+    LocalStorageComponent,
   
   ],
   imports: [
