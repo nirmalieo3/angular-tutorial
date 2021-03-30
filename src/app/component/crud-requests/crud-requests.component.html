@@ -1,0 +1,18 @@
+<div style="margin-left: 30%">
+ <h3>Elenco persone</h3>
+  <p *ngFor= 'let item of personeList'>{{item.name}}
+      (id:{{item.id}})
+  </p>
+   <h3>Aggungi persona (inserire il nome):</h3>
+   <input tye="text" [(ngModel)] = "nome">
+   <br><br>
+   <button mat-button mat-raised-button color="primary"
+    (click)= "postDati()" [disabled]="!nome">Aggiungi Persona</button>
+   <br><br>
+   <h3>Removi Persona (inserire 1'id):</h3>
+   <input type="text" [(ngModel)]= "sharedService.userId">
+   <br><br>
+   <button mat-button mat-raised-button color="warn"
+    (click)= "deleteDati()" [disabled]= "!sharedService.userId">Removi Persone</button>
+   <br>
+</div>

@@ -34,6 +34,23 @@ import { ReactiveForms2Component } from './component/reactive-forms2/reactive-fo
 import { FormDataComponent } from './component/form-data/form-data.component';
 import { InformaticaComponent } from './component/informatica/informatica.component';
 import { LocalStorageComponent } from './component/local-storage/local-storage.component';
+import { CrudRequestsComponent } from './component/crud-requests/crud-requests.component';
+import { SharedService } from './shared.service';
+import { NgxUiLoaderConfig, NgxUiLoaderModule, PB_DIRECTION, POSITION, SPINNER } from 'ngx-ui-loader';
+
+const ngxUiLoaderConfig:NgxUiLoaderConfig ={
+
+  
+  "fgsColor": "red",
+  "fgsPosition": POSITION.centerCenter,
+  "fgsSize": 60,
+  "fgsType": SPINNER.cubeGrid,
+  "overlayColor": "rgba(40, 40, 40, 0.8)",
+  "pbColor": "red",
+  "pbDirection": PB_DIRECTION.leftToRight,
+  "pbThickness": 3,
+ 
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +70,7 @@ import { LocalStorageComponent } from './component/local-storage/local-storage.c
     FormDataComponent,
     InformaticaComponent,
     LocalStorageComponent,
+    CrudRequestsComponent,
   
   ],
   imports: [
@@ -74,9 +92,10 @@ import { LocalStorageComponent } from './component/local-storage/local-storage.c
     FlexLayoutModule ,
     HttpClientModule,
     MatPaginatorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
   ],
-  providers: [StudentService], 
+  providers: [StudentService, SharedService], 
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA] 
 })
