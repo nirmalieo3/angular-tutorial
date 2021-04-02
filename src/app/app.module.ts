@@ -38,6 +38,9 @@ import { CrudRequestsComponent } from './component/crud-requests/crud-requests.c
 import { SharedService } from './shared.service';
 import { NgxUiLoaderConfig, NgxUiLoaderModule, PB_DIRECTION, POSITION, SPINNER } from 'ngx-ui-loader';
 
+
+
+
 const ngxUiLoaderConfig:NgxUiLoaderConfig ={
 
   
@@ -70,8 +73,7 @@ const ngxUiLoaderConfig:NgxUiLoaderConfig ={
     FormDataComponent,
     InformaticaComponent,
     LocalStorageComponent,
-    CrudRequestsComponent,
-  
+    CrudRequestsComponent    
   ],
   imports: [
     BrowserModule,

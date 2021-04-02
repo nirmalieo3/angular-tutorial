@@ -26,7 +26,7 @@ const routes: Routes = [
  {path:'reactiveForms2', component:  ReactiveForms2Component},
  {path:'informatica', component:  InformaticaComponent},
  {path:'localstorage', component:  LocalStorageComponent},
- {path:'crudRequests', component: CrudRequestsComponent}
+ {path:'crudRequests', component: CrudRequestsComponent},
 
 ]
 

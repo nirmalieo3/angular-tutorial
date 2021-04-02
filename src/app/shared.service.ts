@@ -10,7 +10,8 @@ const urlMockServer = " http://localhost:3000"
   providedIn: 'root'
 })
 export class SharedService {
-  userId;
+  userId : number;
+  userId2: number;
   constructor(private http: HttpClient) { }
   getProducts():Observable<DataTable[]>{
     return this.http.get<DataTable[]>(apiUrl);
@@ -22,6 +23,11 @@ export class SharedService {
     const headers = 
     new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post<any>(urlMockServer + '/people', oggetto , {headers})
+  }
+
+  putPeople(oggetto):Observable<any>{
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.put<any>(urlMockServer + '/people/' + this.userId2, oggetto, {headers})
   }
   deletePeople():Observable<any>{
     return this.http.delete<any>(urlMockServer + '/people/'+ this.userId)

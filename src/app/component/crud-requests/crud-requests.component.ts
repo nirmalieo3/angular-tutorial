@@ -10,6 +10,7 @@ import { SharedService } from 'src/app/shared.service';
 
 
 export class CrudRequestsComponent implements OnInit {
+  nome2: string;
   nome: string;
   personeList:any;
   constructor(public sharedService : SharedService, public ngxService : NgxUiLoaderService) { }
@@ -42,4 +43,14 @@ export class CrudRequestsComponent implements OnInit {
        this.getDati();
      })
    }
+   updateDati(){
+    this.ngxService.start(); 
+     this.sharedService.putPeople({"name":this.nome2}).subscribe(data=>{
+       this.nome2 = null;
+       this.sharedService.userId = null;
+       console.log(data, 'Dati3');
+       this.getDati();
+     })
+     }
 }
+

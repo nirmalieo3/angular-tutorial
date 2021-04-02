@@ -15,4 +15,11 @@
    <button mat-button mat-raised-button color="warn"
     (click)= "deleteDati()" [disabled]= "!sharedService.userId">Removi Persone</button>
    <br>
+   <h3>Aggungi persona (inserire il nome):</h3>
+   <input tye="text" [(ngModel)] = "nome2">
+   <input tye="text" [(ngModel)] = "sharedService.userId2">
+   <br><br>
+   <button mat-button mat-raised-button color="primary"
+    (click)= "updateDati()" [disabled]= "!sharedService.userId2 || !nome2">Aggiungi Persona</button>
+   <br><br>
 </div>
